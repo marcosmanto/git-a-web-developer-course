@@ -1,0 +1,35 @@
+.feature-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+
+  @mixin atSmall {
+    flex-wrap: unset;
+    padding-bottom: 2.5rem;
+  }
+
+  &__icon {
+    flex-basis: 25%;
+    padding-right: 1.25rem;
+    align-self: flex-start;
+    margin: 0 auto;
+    @mixin atSmall {
+      flex-basis: 94px;
+    }
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0 0 .8rem 0;
+    margin-top: 1rem;
+    text-align: center;
+
+    @mixin atSmall {
+      font-size: 1.875rem;
+      text-align: left;
+    }
+  }
+
+
+}

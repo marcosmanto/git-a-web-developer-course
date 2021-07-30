@@ -1,0 +1,25 @@
+.primary-nav {
+  display: flex;
+  &--pull-right {
+    flex: 1;
+  }
+  justify-content: flex-end;
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items: center;
+    li {
+      padding: 0 1rem;
+    }
+  }
+
+  a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 300;
+  }
+}

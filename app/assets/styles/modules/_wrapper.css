@@ -10,6 +10,17 @@
     display: flex;
   }
 
+  &--m-top {
+    margin-top: 100px;
+  }
+
+  &--flex-wrap-mobile {
+    flex-wrap: wrap;
+    @mixin atMedium {
+      flex-wrap: nowrap;
+    }
+  }
+
   &--flex-space-between {
     justify-content: space-between;
   }

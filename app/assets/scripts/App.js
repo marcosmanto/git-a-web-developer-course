@@ -1,7 +1,7 @@
 import '../styles/styles.css'
 import MobileMenu from './modules/MobileMenu';
 import RevealOnScroll from './modules/RevealOnScroll';
-
+import StickHeader from './modules/StickyHeader';
 
 
 if(module.hot) {
@@ -15,4 +15,5 @@ if(navigator.userAgent.match(/chrome|opera/i))
 
 new RevealOnScroll(document.querySelectorAll('.featured-item'), 75)
 new RevealOnScroll(document.querySelectorAll('.testimonial'), 60)
+const stickyHeader = new StickHeader()
 const mobileMenu = new MobileMenu()

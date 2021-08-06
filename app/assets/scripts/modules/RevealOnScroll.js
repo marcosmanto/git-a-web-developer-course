@@ -1,8 +1,9 @@
 const {throttle} = require('lodash')
 import debounce from 'lodash/debounce'
 class RevealOnScroll {
-  constructor() {
-    this.itensToReveal = document.querySelectorAll('.featured-item')
+  constructor(elements, thresholdPercent) {
+    this.thresholdPercent = thresholdPercent
+    this.itensToReveal = elements
     this.browserHeight = window.innerHeight
     this.scrollThrottle = throttle(this.calcCaller, 200).bind(this)
     this.hideInitially()
@@ -27,7 +28,7 @@ class RevealOnScroll {
   calculateIfScrolledTo(el) {
     if (window.scrollY + this.browserHeight > el.offsetTop) {
       const scrollPercent = (el.getBoundingClientRect().top / this.browserHeight) * 100
-      if (scrollPercent < 75) {
+      if (scrollPercent < this.thresholdPercent) {
         el.classList.add('reveal-item--is-visible')
         el.isRevealed = true
         if(el.isLastItem) {

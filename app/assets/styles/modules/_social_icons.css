@@ -1,0 +1,24 @@
+.social-icons {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 200px;
+  margin: 0 auto;
+
+  @mixin atSmall {
+    & {
+      width: inherit;
+    }
+  }
+
+  &__icon {
+    background-color: $mainOrange;
+    flex-basis: 72px;
+    height: 72px;
+    margin: 0 5px 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

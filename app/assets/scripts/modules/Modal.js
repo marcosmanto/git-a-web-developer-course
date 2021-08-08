@@ -25,7 +25,6 @@ export default class Modal {
   }
 
   closeTheModal() {
-    console.log('xxxxxxxxxxxx')
     this.modal.classList.remove('modal--is-visible')
   }
 

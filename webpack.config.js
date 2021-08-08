@@ -36,7 +36,6 @@ let pages = fse.readdirSync('./app')
     })
   })
 
-
 let config = {
   entry: './app/assets/scripts/App.js',
   module: {
@@ -44,12 +43,7 @@ let config = {
       cssConfig
     ]
   },
-  plugins: [
-    new HtmlPlugin({
-      filename: 'index.html',
-      template: './app/index.html'
-    })
-  ]
+  plugins: pages
 }
 
 if (currentTask === 'dev') {

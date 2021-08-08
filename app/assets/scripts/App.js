@@ -2,6 +2,7 @@ import '../styles/styles.css'
 import MobileMenu from './modules/MobileMenu';
 import RevealOnScroll from './modules/RevealOnScroll';
 import StickHeader from './modules/StickyHeader';
+import 'lazysizes'
 
 if(module.hot) {
   module.hot.accept()
